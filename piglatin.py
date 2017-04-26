@@ -1,9 +1,9 @@
 import re
 pyg = 'ay'
 
-print "Welcome to the Pig Latin translator 1.0"
+print("Welcome to the Pig Latin translator 1.0")
 
-original = raw_input('Enter a word or sentence: ')
+original = input('Enter a word or sentence: ')
 # create array of all words
 multiple = re.findall(r"[\w']+", original)
 
@@ -15,7 +15,7 @@ def singleword(input):
         new_word = word[1:len(word)] + first + pyg
         return new_word
     else:
-        print '** Gnoringiay ordway ' + input + ' tiay siay Reekgay otay emay'
+        print('** Gnoringiay ordway ' + input + ' tiay siay Reekgay otay emay')
         return ''
 
 # validating that we have entered something
@@ -29,4 +29,4 @@ if validate(original):
     result = ''
     for word in multiple:
          result += ' ' + singleword(word)
-    print 'In Pig Latin this is: ' + result[1:len(result)]
+    print('In Pig Latin this is: ' + result[1:len(result)])
